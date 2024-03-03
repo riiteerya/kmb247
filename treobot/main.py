@@ -17,16 +17,7 @@ from google_authenticator import GoogleAuthenticator
 import speedtest
 import types
 import pyshorteners
-import logging
 
-# Thiết lập cấp độ log và định dạng
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-
-# Tạo một đối tượng logger cho bot của bạn
-logger = logging.getLogger(__name__)
-
-# Bắt đầu log khi bot được khởi động
-logger.info('Bot started successfully.')
 
 bot_token = '6870197479:AAElHTqilYCe7aVIGY881kAbTDll35bBD9A'
 
