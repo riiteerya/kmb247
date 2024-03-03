@@ -1,4 +1,3 @@
-import telebot
 import datetime
 import time
 import os
@@ -13,10 +12,9 @@ import zipfile
 import io
 import re
 import threading
-import telebot
 from google_authenticator import GoogleAuthenticator
 import speedtest
-from telebot import types
+import types
 import pyshorteners
 
 bot_token = '6870197479:AAElHTqilYCe7aVIGY881kAbTDll35bBD9A'
