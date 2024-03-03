@@ -82,13 +82,6 @@ def save_user_to_database(connection, user_id, expiration_time):
     ''', (user_id, expiration_time.strftime('%Y-%m-%d %H:%M:%S')))
   connection.commit()
 
-@bot.message_handler(func=lambda message: True)
-def echo_all(message):
-    # Log khi nhận được một tin nhắn mới
-    logger.info(f"Received message: {message.text}")
-
-    # Xử lý tin nhắn như bình thường
-    bot.reply_to(message, message.text)
 
 @bot.message_handler(commands=['add'])
 def add_user(message):
