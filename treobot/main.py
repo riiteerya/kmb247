@@ -19,18 +19,18 @@ import speedtest
 from telebot import types
 import pyshorteners
 
-bot_token = '5977326015:AAFnjYcdOAUyAY6_4fLT73pRJwHqwMVW5To'
+bot_token = '6870197479:AAElHTqilYCe7aVIGY881kAbTDll35bBD9A'
 
 bot = telebot.TeleBot(bot_token)
 IMGUR_CLIENT_ID = '74f5c858f447bb9'
 SHORTENER = pyshorteners.Shortener()
 
-allowed_group_id = -1001988961300
+allowed_group_id = -1002042041196
 
 allowed_users = []
 processes = []
-ADMIN_ID = 5047988352
-GROUP_ID = '-1001929593081'  # Thay YOUR_GROUP_ID bằng ID của nhóm Telegram bạn muốn thông báo
+ADMIN_ID = 6670870530
+GROUP_ID = '-4112260455'  # Thay YOUR_GROUP_ID bằng ID của nhóm Telegram bạn muốn thông báo
 proxy_update_count = 0
 last_proxy_update_time = time.time()
 key_dict = {}
