@@ -17,6 +17,16 @@ from google_authenticator import GoogleAuthenticator
 import speedtest
 import types
 import pyshorteners
+import logging
+
+# Thiết lập cấp độ log và định dạng
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+# Tạo một đối tượng logger cho bot của bạn
+logger = logging.getLogger(__name__)
+
+# Bắt đầu log khi bot được khởi động
+logger.info('Bot started successfully.')
 
 bot_token = '6870197479:AAElHTqilYCe7aVIGY881kAbTDll35bBD9A'
 
@@ -72,6 +82,13 @@ def save_user_to_database(connection, user_id, expiration_time):
     ''', (user_id, expiration_time.strftime('%Y-%m-%d %H:%M:%S')))
   connection.commit()
 
+@bot.message_handler(func=lambda message: True)
+def echo_all(message):
+    # Log khi nhận được một tin nhắn mới
+    logger.info(f"Received message: {message.text}")
+
+    # Xử lý tin nhắn như bình thường
+    bot.reply_to(message, message.text)
 
 @bot.message_handler(commands=['add'])
 def add_user(message):
